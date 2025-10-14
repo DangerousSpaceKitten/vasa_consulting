@@ -10,7 +10,7 @@ import json
 from pathlib import Path
 
 current_week = 4
-import_topic = "transactions"
+import_topic = "schedules"
 data = {}
 
 def write_string_to_txt(text: str, subfolder: str, filename: str, base_dir: Path | None = None):
@@ -182,7 +182,7 @@ def process_schedules():
                         continue  # skip empty rows
                     output_lines.append(
                         "INSERT INTO SCHEDULES (WEEK, DAY, WORKER_ID, DEPARTMENT, SHIFT) "
-                        f"VALUES ({i}, {q(day)}, {q(worker_id)}, {q(dept)}, {q(shift)});"
+                        f"VALUES ({i}, {q(day)}, {q(worker_id)}, {q(dept)}, {q(shift)});\n"
                     )
 
         # List form: [{"day": "...", ...}, ...]
