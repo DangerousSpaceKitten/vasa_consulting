@@ -1,0 +1,704 @@
+{
+    "1": [
+        {
+            "customer_id": "c_a33094e3-e2c8-48b8-a327-b0ada786b5b3",
+            "merch_types": [
+                "mattress"
+            ],
+            "merch_amounts": [
+                2
+            ],
+            "register_worker": "w_cbcc4e50-b51f-40a7-8c01-7fa55eb7ae77",
+            "transaction_type": "customer_sale"
+        }
+    ],
+    "2": [
+        {
+            "customer_id": "c_3f614e05-4af3-442c-8a2c-5f57693bfb39",
+            "merch_types": [
+                "mattress"
+            ],
+            "merch_amounts": [
+                2
+            ],
+            "register_worker": "w_cbcc4e50-b51f-40a7-8c01-7fa55eb7ae77",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_3f614e05-4af3-442c-8a2c-5f57693bfb39",
+            "merch_types": [
+                "knives",
+                "rice_porridge"
+            ],
+            "merch_amounts": [
+                1,
+                1
+            ],
+            "register_worker": "w_3d599b51-c04b-413d-b904-2742c408a32e",
+            "transaction_type": "customer_sale"
+        }
+    ],
+    "3": [
+        {
+            "customer_id": "c_dd03cdfd-bc31-4502-90f2-69499ed4934a",
+            "merch_types": [
+                "ice_cream"
+            ],
+            "merch_amounts": [
+                1
+            ],
+            "register_worker": "w_cbcc4e50-b51f-40a7-8c01-7fa55eb7ae77",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_3f614e05-4af3-442c-8a2c-5f57693bfb39",
+            "merch_types": [
+                "knives",
+                "hot_dogs",
+                "monster"
+            ],
+            "merch_amounts": [
+                1,
+                2,
+                2
+            ],
+            "register_worker": "w_3d599b51-c04b-413d-b904-2742c408a32e",
+            "transaction_type": "customer_sale"
+        }
+    ],
+    "4": [
+        {
+            "customer_id": "c_3f614e05-4af3-442c-8a2c-5f57693bfb39",
+            "merch_types": [
+                "ice_cream",
+                "monster"
+            ],
+            "merch_amounts": [
+                4,
+                3
+            ],
+            "register_worker": "w_cbcc4e50-b51f-40a7-8c01-7fa55eb7ae77",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_3f614e05-4af3-442c-8a2c-5f57693bfb39",
+            "merch_types": [
+                "ice_cream",
+                "sunscreen",
+                "nails",
+                "rice_porridge"
+            ],
+            "merch_amounts": [
+                3,
+                2,
+                2,
+                1
+            ],
+            "register_worker": "w_3d599b51-c04b-413d-b904-2742c408a32e",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_d7bec987-c184-4afe-b084-d2c19239571e",
+            "merch_types": [
+                "knives",
+                "hot_dogs",
+                "monster"
+            ],
+            "merch_amounts": [
+                2,
+                3,
+                6
+            ],
+            "register_worker": "w_3d599b51-c04b-413d-b904-2742c408a32e",
+            "transaction_type": "customer_sale"
+        }
+    ],
+    "5": [
+        {
+            "customer_id": "c_3f614e05-4af3-442c-8a2c-5f57693bfb39",
+            "merch_types": [
+                "knives",
+                "monster"
+            ],
+            "merch_amounts": [
+                1,
+                3
+            ],
+            "register_worker": "w_cbcc4e50-b51f-40a7-8c01-7fa55eb7ae77",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_b4d989f9-7deb-4005-ae13-531786d48f82",
+            "merch_types": [
+                "knives",
+                "nails",
+                "hot_dogs",
+                "monster"
+            ],
+            "merch_amounts": [
+                1,
+                2,
+                4,
+                2
+            ],
+            "register_worker": "w_cbcc4e50-b51f-40a7-8c01-7fa55eb7ae77",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_b4d989f9-7deb-4005-ae13-531786d48f82",
+            "merch_types": [
+                "ice_cream",
+                "knives",
+                "hammer",
+                "nails"
+            ],
+            "merch_amounts": [
+                1,
+                1,
+                2,
+                3
+            ],
+            "register_worker": "w_3d599b51-c04b-413d-b904-2742c408a32e",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_b4d989f9-7deb-4005-ae13-531786d48f82",
+            "merch_types": [
+                "knives",
+                "hammer",
+                "nails",
+                "hot_dogs"
+            ],
+            "merch_amounts": [
+                1,
+                3,
+                2,
+                1
+            ],
+            "register_worker": "w_3d599b51-c04b-413d-b904-2742c408a32e",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_3f614e05-4af3-442c-8a2c-5f57693bfb39",
+            "merch_types": [
+                "knives",
+                "hammer",
+                "monster",
+                "batteries"
+            ],
+            "merch_amounts": [
+                2,
+                2,
+                2,
+                4
+            ],
+            "register_worker": "w_3d599b51-c04b-413d-b904-2742c408a32e",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_3f614e05-4af3-442c-8a2c-5f57693bfb39",
+            "merch_types": [
+                "ice_cream",
+                "hammer",
+                "monster",
+                "batteries"
+            ],
+            "merch_amounts": [
+                1,
+                3,
+                1,
+                2
+            ],
+            "register_worker": "w_3d599b51-c04b-413d-b904-2742c408a32e",
+            "transaction_type": "customer_sale"
+        }
+    ],
+    "6": [
+        {
+            "customer_id": "c_b4d989f9-7deb-4005-ae13-531786d48f82",
+            "merch_types": [
+                "knives",
+                "batteries",
+                "nails"
+            ],
+            "merch_amounts": [
+                1,
+                2,
+                2
+            ],
+            "register_worker": "w_cbcc4e50-b51f-40a7-8c01-7fa55eb7ae77",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_3f614e05-4af3-442c-8a2c-5f57693bfb39",
+            "merch_types": [
+                "knives",
+                "batteries",
+                "sunscreen",
+                "monster"
+            ],
+            "merch_amounts": [
+                1,
+                3,
+                3,
+                4
+            ],
+            "register_worker": "w_cbcc4e50-b51f-40a7-8c01-7fa55eb7ae77",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_3f614e05-4af3-442c-8a2c-5f57693bfb39",
+            "merch_types": [
+                "ice_cream",
+                "sunscreen",
+                "monster"
+            ],
+            "merch_amounts": [
+                1,
+                3,
+                2
+            ],
+            "register_worker": "w_3d599b51-c04b-413d-b904-2742c408a32e",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_d7bec987-c184-4afe-b084-d2c19239571e",
+            "merch_types": [
+                "knives",
+                "monster"
+            ],
+            "merch_amounts": [
+                1,
+                2
+            ],
+            "register_worker": "w_3d599b51-c04b-413d-b904-2742c408a32e",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_623e3d29-d8b1-4ea4-a16b-b36f73724e4c",
+            "merch_types": [
+                "ice_cream"
+            ],
+            "merch_amounts": [
+                2
+            ],
+            "register_worker": "w_3d599b51-c04b-413d-b904-2742c408a32e",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_3f614e05-4af3-442c-8a2c-5f57693bfb39",
+            "merch_types": [
+                "ice_cream",
+                "knives",
+                "batteries"
+            ],
+            "merch_amounts": [
+                2,
+                1,
+                3
+            ],
+            "register_worker": "w_3d599b51-c04b-413d-b904-2742c408a32e",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_d7bec987-c184-4afe-b084-d2c19239571e",
+            "merch_types": [
+                "knives",
+                "hot_dogs",
+                "rice_porridge"
+            ],
+            "merch_amounts": [
+                1,
+                4,
+                2
+            ],
+            "register_worker": "w_3d599b51-c04b-413d-b904-2742c408a32e",
+            "transaction_type": "customer_sale"
+        }
+    ],
+    "7": [
+        {
+            "customer_id": "c_d7bec987-c184-4afe-b084-d2c19239571e",
+            "merch_types": [
+                "knives"
+            ],
+            "merch_amounts": [
+                1
+            ],
+            "register_worker": "w_cbcc4e50-b51f-40a7-8c01-7fa55eb7ae77",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_3f614e05-4af3-442c-8a2c-5f57693bfb39",
+            "merch_types": [
+                "rice_porridge"
+            ],
+            "merch_amounts": [
+                3
+            ],
+            "register_worker": "w_cbcc4e50-b51f-40a7-8c01-7fa55eb7ae77",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_3f614e05-4af3-442c-8a2c-5f57693bfb39",
+            "merch_types": [
+                "rice_porridge",
+                "knives",
+                "hot_dogs",
+                "sunscreen",
+                "ice_cream"
+            ],
+            "merch_amounts": [
+                4,
+                2,
+                2,
+                3,
+                1
+            ],
+            "register_worker": "w_cbcc4e50-b51f-40a7-8c01-7fa55eb7ae77",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_1ebba27b-3eba-430c-81ab-c7e7eaf2bfed",
+            "merch_types": [
+                "mattress",
+                "batteries",
+                "monster",
+                "nails"
+            ],
+            "merch_amounts": [
+                1,
+                3,
+                2,
+                3
+            ],
+            "register_worker": "w_cbcc4e50-b51f-40a7-8c01-7fa55eb7ae77",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_a611de32-332e-4187-be13-7f51bb2811a9",
+            "merch_types": [
+                "knives",
+                "monster"
+            ],
+            "merch_amounts": [
+                1,
+                6
+            ],
+            "register_worker": "w_cbcc4e50-b51f-40a7-8c01-7fa55eb7ae77",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_d7bec987-c184-4afe-b084-d2c19239571e",
+            "merch_types": [
+                "mattress",
+                "ice_cream",
+                "monster",
+                "hot_dogs"
+            ],
+            "merch_amounts": [
+                2,
+                2,
+                3,
+                4
+            ],
+            "register_worker": "w_cbcc4e50-b51f-40a7-8c01-7fa55eb7ae77",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_874eb44f-c67b-45fa-8f07-eedaf7fd922a",
+            "merch_types": [
+                "mattress",
+                "hammer",
+                "ice_cream",
+                "sunscreen"
+            ],
+            "merch_amounts": [
+                1,
+                2,
+                3,
+                3
+            ],
+            "register_worker": "w_b913d35d-8664-4bae-93dc-06c43d5fa769",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_623e3d29-d8b1-4ea4-a16b-b36f73724e4c",
+            "merch_types": [
+                "ice_cream",
+                "sunscreen",
+                "hot_dogs",
+                "rice_porridge"
+            ],
+            "merch_amounts": [
+                1,
+                2,
+                3,
+                1
+            ],
+            "register_worker": "w_cbcc4e50-b51f-40a7-8c01-7fa55eb7ae77",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_874eb44f-c67b-45fa-8f07-eedaf7fd922a",
+            "merch_types": [
+                "ice_cream",
+                "knives",
+                "sunscreen"
+            ],
+            "merch_amounts": [
+                2,
+                1,
+                3
+            ],
+            "register_worker": "w_b913d35d-8664-4bae-93dc-06c43d5fa769",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_623e3d29-d8b1-4ea4-a16b-b36f73724e4c",
+            "merch_types": [
+                "dinosaur"
+            ],
+            "merch_amounts": [
+                3
+            ],
+            "register_worker": "w_cbcc4e50-b51f-40a7-8c01-7fa55eb7ae77",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_dd03cdfd-bc31-4502-90f2-69499ed4934a",
+            "merch_types": [
+                "ice_cream",
+                "sunscreen",
+                "nails",
+                "rice_porridge",
+                "monster"
+            ],
+            "merch_amounts": [
+                4,
+                2,
+                3,
+                2,
+                6
+            ],
+            "register_worker": "w_b913d35d-8664-4bae-93dc-06c43d5fa769",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_b4d989f9-7deb-4005-ae13-531786d48f82",
+            "merch_types": [
+                "mattress",
+                "hammer",
+                "monster",
+                "batteries",
+                "nails"
+            ],
+            "merch_amounts": [
+                2,
+                1,
+                3,
+                3,
+                2
+            ],
+            "register_worker": "w_b5099cd3-98cc-46a9-a8c7-dd34a860b96d",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_84960d1a-88d4-4ba4-a564-84cb693083c0",
+            "merch_types": [
+                "ice_cream",
+                "hammer",
+                "nails",
+                "sunscreen",
+                "hot_dogs",
+                "rice_porridge"
+            ],
+            "merch_amounts": [
+                4,
+                2,
+                3,
+                3,
+                2,
+                2
+            ],
+            "register_worker": "w_3d599b51-c04b-413d-b904-2742c408a32e",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_84960d1a-88d4-4ba4-a564-84cb693083c0",
+            "merch_types": [
+                "ice_cream",
+                "batteries"
+            ],
+            "merch_amounts": [
+                1,
+                3
+            ],
+            "register_worker": "w_3d599b51-c04b-413d-b904-2742c408a32e",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_d7bec987-c184-4afe-b084-d2c19239571e",
+            "merch_types": [
+                "knives",
+                "monster",
+                "nails"
+            ],
+            "merch_amounts": [
+                1,
+                6,
+                2
+            ],
+            "register_worker": "w_3d599b51-c04b-413d-b904-2742c408a32e",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_3f614e05-4af3-442c-8a2c-5f57693bfb39",
+            "merch_types": [
+                "ice_cream",
+                "sunscreen",
+                "hammer",
+                "batteries"
+            ],
+            "merch_amounts": [
+                2,
+                2,
+                3,
+                1
+            ],
+            "register_worker": "w_7722b4a8-ea96-47b2-a2c7-657177bd3da0",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_84960d1a-88d4-4ba4-a564-84cb693083c0",
+            "merch_types": [
+                "ice_cream",
+                "knives",
+                "sunscreen",
+                "batteries",
+                "nails"
+            ],
+            "merch_amounts": [
+                2,
+                2,
+                3,
+                3,
+                3
+            ],
+            "register_worker": "w_3d599b51-c04b-413d-b904-2742c408a32e",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_b4d989f9-7deb-4005-ae13-531786d48f82",
+            "merch_types": [
+                "mattress",
+                "batteries",
+                "rice_porridge",
+                "hot_dogs",
+                "monster"
+            ],
+            "merch_amounts": [
+                3,
+                2,
+                1,
+                1,
+                4
+            ],
+            "register_worker": "w_3d599b51-c04b-413d-b904-2742c408a32e",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_b4d989f9-7deb-4005-ae13-531786d48f82",
+            "merch_types": [
+                "mattress",
+                "nails"
+            ],
+            "merch_amounts": [
+                1,
+                3
+            ],
+            "register_worker": "w_3d599b51-c04b-413d-b904-2742c408a32e",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_874eb44f-c67b-45fa-8f07-eedaf7fd922a",
+            "merch_types": [
+                "knives",
+                "batteries",
+                "hot_dogs",
+                "rice_porridge",
+                "monster"
+            ],
+            "merch_amounts": [
+                1,
+                2,
+                2,
+                1,
+                4
+            ],
+            "register_worker": "w_3d599b51-c04b-413d-b904-2742c408a32e",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_623e3d29-d8b1-4ea4-a16b-b36f73724e4c",
+            "merch_types": [
+                "knives",
+                "sunscreen",
+                "ice_cream",
+                "rice_porridge",
+                "hot_dogs",
+                "monster"
+            ],
+            "merch_amounts": [
+                1,
+                1,
+                2,
+                4,
+                3,
+                1
+            ],
+            "register_worker": "w_3d599b51-c04b-413d-b904-2742c408a32e",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_dd03cdfd-bc31-4502-90f2-69499ed4934a",
+            "merch_types": [
+                "ice_cream",
+                "knives",
+                "batteries",
+                "nails"
+            ],
+            "merch_amounts": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "register_worker": "w_3d599b51-c04b-413d-b904-2742c408a32e",
+            "transaction_type": "customer_sale"
+        },
+        {
+            "customer_id": "c_1f548e6e-6fad-4fcd-9003-3a2b16701fcd",
+            "merch_types": [
+                "mattress",
+                "hammer",
+                "nails",
+                "ice_cream",
+                "hot_dogs",
+                "monster",
+                "laderhosen"
+            ],
+            "merch_amounts": [
+                1,
+                2,
+                1,
+                2,
+                3,
+                6,
+                2
+            ],
+            "register_worker": "w_3d599b51-c04b-413d-b904-2742c408a32e",
+            "transaction_type": "customer_sale"
+        }
+    ]
+}
