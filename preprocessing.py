@@ -10,7 +10,7 @@ import json
 from pathlib import Path
 
 current_week = 4
-import_topic = "schedules"
+import_topic = "transactions"
 data = {}
 
 def write_string_to_txt(text: str, subfolder: str, filename: str, base_dir: Path | None = None):
@@ -115,44 +115,97 @@ def process_prices():
 
     write_string_to_txt(output, "insert_scripts", "prices.txt")
 
+
 def process_schedules():
+    """
+    Build INSERT statements for the SCHEDULES table from weekN/schedules_N.json files.
+    Expected JSON per file:
+      Option A (recommended):
+        {
+          "monday": [{"worker_id": "...", "department": "...", "shift": "..."}, ...],
+          "tuesday": [...],
+          ...
+        }
+      Option B:
+        [
+          {"day": "monday", "worker_id": "...", "department": "...", "shift": "..."},
+          ...
+        ]
+      Option C:
+        Same as A, but with numeric day keys (0=mon..6=sun) as strings or ints.
+    """
+    # Load weekly files
     for i in range(current_week):
-        file = open(f"week{i}/{import_topic}_{i}.json", "r")
-        data[f"{i}"] = json.load(file)
-    
-    days_of_the_week = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+        with open(f"week{i}/{import_topic}_{i}.json", "r", encoding="utf-8") as file:
+            data[f"{i}"] = json.load(file)
 
+    def q(s) -> str:
+        return "'" + str(s).replace("'", "''") + "'"
 
+    days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
 
-    flat_data = {k: [x for kv in v.items() for x in kv] for k, v in data.items()}
+    def normalize_day(d):
+        # Accept ints, numeric strings, and canonical day names (case-insensitive)
+        if isinstance(d, int):
+            return days[d % 7] if 0 <= d < 7 else str(d)
+        s = str(d).strip().lower()
+        if s.isdigit():
+            idx = int(s)
+            if 0 <= idx < 7:
+                return days[idx]
+        if s in days:
+            return s
+        # Try 3-letter abbreviations (mon, tue, ...)
+        for name in days:
+            if s.startswith(name[:3]):
+                return name
+        return s
 
-    print(flat_data["0"][0], flat_data["0"][1][0]["worker_id"], flat_data["0"][1][0]["department"], flat_data["0"][1][0]["shift"])
-
-    
-    output = ""
-    day = ""
+    output_lines = []
 
     for i in range(current_week):
-        for j in range(len(flat_data[f"{i}"])):
-            for k in range(len(flat_data[f"{i}"][j])):
-                if j == 0:
-                 day = flat_data[f"{i}"][j]
-                else:
-                    #print({flat_data[f"{i}"][j][k]})
-                    output += f"INSERT INTO SCHEDULES (WEEK, DAY, WORKER_ID, DEPARTMENT, SHIFT) VALUES ({i}, {day}, {[flat_data[f"{i}"][j][k]["worker_id"], flat_data[f"{i}"][j][k]["department"], flat_data[f"{i}"][j][k]["shift"]]});\n"
+        week_payload = data.get(f"{i}")
+        if week_payload is None:
+            continue
+
+        # Dict form: {day -> [assignments]}
+        if isinstance(week_payload, dict):
+            for day_key, assignments in week_payload.items():
+                day = normalize_day(day_key)
+                if not isinstance(assignments, list):
+                    continue
+                for rec in assignments:
+                    worker_id = rec.get("worker_id", "")
+                    dept = rec.get("department", "")
+                    shift = rec.get("shift", "")
+                    if worker_id == "" and dept == "" and shift == "":
+                        continue  # skip empty rows
+                    output_lines.append(
+                        "INSERT INTO SCHEDULES (WEEK, DAY, WORKER_ID, DEPARTMENT, SHIFT) "
+                        f"VALUES ({i}, {q(day)}, {q(worker_id)}, {q(dept)}, {q(shift)});"
+                    )
+
+        # List form: [{"day": "...", ...}, ...]
+        elif isinstance(week_payload, list):
+            for rec in week_payload:
+                day = normalize_day(rec.get("day", ""))
+                worker_id = rec.get("worker_id", "")
+                dept = rec.get("department", "")
+                shift = rec.get("shift", "")
+                if day == "" and worker_id == "" and dept == "" and shift == "":
+                    continue
+                output_lines.append(
+                    "INSERT INTO SCHEDULES (WEEK, DAY, WORKER_ID, DEPARTMENT, SHIFT) "
+                    f"VALUES ({i}, {q(day)}, {q(worker_id)}, {q(dept)}, {q(shift)});"
+                )
+
+        # Anything else -> ignore
+
+    output = "".join(output_lines) + ("" if output_lines else "")
+    write_string_to_txt(output, "insert_scripts", "schedules.txt")
+
+
     
-    output = output.replace("mondaymondaymondaymondaymondaymonday", "monday")
-
-    print(output)
-    
-
-
-def process_transactions():
-    for i in range(current_week):
-        file = open(f"week{i}/{import_topic}_{i}.json", "r")
-        data[f"{i}"] = json.load(file)
-
-    flat_data = {k: [x for kv in v.items() for x in kv] for k, v in data.items()}
 
 
 def process_transactions():
