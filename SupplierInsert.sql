@@ -1,0 +1,13 @@
+INSERT INTO SUPPLIER_PRICES (article_id, supplier_price) VALUES (1,15.0);
+INSERT INTO SUPPLIER_PRICES (article_id, supplier_price) VALUES (2,18.0);
+INSERT INTO SUPPLIER_PRICES (article_id, supplier_price) VALUES (3,8.0);
+INSERT INTO SUPPLIER_PRICES (article_id, supplier_price) VALUES (4,35.0);
+INSERT INTO SUPPLIER_PRICES (article_id, supplier_price) VALUES (5,65.0);
+INSERT INTO SUPPLIER_PRICES (article_id, supplier_price) VALUES (6,220.0);
+INSERT INTO SUPPLIER_PRICES (article_id, supplier_price) VALUES (7,580.0);
+INSERT INTO SUPPLIER_PRICES (article_id, supplier_price) VALUES (8,12.0);
+INSERT INTO SUPPLIER_PRICES (article_id, supplier_price) VALUES (9,16.0);
+INSERT INTO SUPPLIER_PRICES (article_id, supplier_price) VALUES (10,6.0);
+INSERT INTO SUPPLIER_PRICES (article_id, supplier_price) VALUES (11,45.0);
+INSERT INTO SUPPLIER_PRICES (article_id, supplier_price) VALUES (12,38.0);
+INSERT INTO SUPPLIER_PRICES (article_id, supplier_price) VALUES (13,280.0);
