@@ -9,8 +9,8 @@ an sql script to insert the data into the db
 import json
 from pathlib import Path
 
-current_week = 5
-import_topic = "transactions"
+current_week = 6
+import_topic = "schedules"
 data = {}
 
 def write_string_to_txt(text: str, subfolder: str, filename: str, base_dir: Path | None = None):
