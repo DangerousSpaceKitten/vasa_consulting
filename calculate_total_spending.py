@@ -2,8 +2,9 @@ from pathlib import Path
 import json
 
 # Adjust these paths as needed; they’re relative to your current working directory.
-amounts_path = Path("proposals/week4/amounts_4.json")
+amounts_path = Path("proposals/week6/amounts_6.json")
 prices_path = Path("supplier_prices.json")
+
 
 def read_json(path: Path):
     try:
@@ -17,8 +18,9 @@ def read_json(path: Path):
             f"Invalid JSON in {path.name} (line {e.lineno}, col {e.colno}): {e.msg}"
         )
 
+
 amounts = read_json(amounts_path)
-prices  = read_json(prices_path)
+prices = read_json(prices_path)
 
 total_spending = 0
 
