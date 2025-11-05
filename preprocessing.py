@@ -9,9 +9,10 @@ an sql script to insert the data into the db
 import json
 from pathlib import Path
 
-current_week = 7
-import_topic = "transactions"
+current_week = 8
+import_topic = "amounts"  # options: amounts, prices, schedules, transactions
 data = {}
+
 
 def write_string_to_txt(text: str, subfolder: str, filename: str, base_dir: Path | None = None):
     base = base_dir if base_dir is not None else Path.cwd()
@@ -25,17 +26,19 @@ def write_string_to_txt(text: str, subfolder: str, filename: str, base_dir: Path
 
     print(f"File saved to {file_path}")
 
+
 def process_amounts():
     for i in range(current_week):
         file = open(f"week{i}/{import_topic}_{i}.json", "r")
         data[f"{i}"] = json.load(file)
 
-    flat_data = {k: [x for kv in v.items() for x in kv] for k, v in data.items()}
+    flat_data = {k: [x for kv in v.items() for x in kv]
+                 for k, v in data.items()}
 
     for i in range(len(flat_data)):
         for j in range(len(flat_data[f"{i}"])):
             match flat_data[f"{i}"][j]:
-                case "rice_porridge": 
+                case "rice_porridge":
                     flat_data[f"{i}"][j] = 1
                 case "hot_dogs":
                     flat_data[f"{i}"][j] = 2
@@ -66,21 +69,24 @@ def process_amounts():
 
     for j in range(0, len(flat_data[f"{0}"]), 2):
         for i in range(0, len(flat_data)):
-            output += f"INSERT INTO PURCHASES (WEEK, ARTICLE_ID, AMOUNT) VALUES ({i}, {flat_data[f"{i}"][j]}, {flat_data[f"{i}"][j+1]});\n"
+            output += f"INSERT INTO PURCHASES (WEEK, ARTICLE_ID, AMOUNT) VALUES ({i}, {flat_data[f"{i}"][j]}, {
+                flat_data[f"{i}"][j+1]});\n"
 
     write_string_to_txt(output, "insert_scripts", "purchases.txt")
+
 
 def process_prices():
     for i in range(current_week):
         file = open(f"week{i}/{import_topic}_{i}.json", "r")
         data[f"{i}"] = json.load(file)
 
-    flat_data = {k: [x for kv in v.items() for x in kv] for k, v in data.items()}
+    flat_data = {k: [x for kv in v.items() for x in kv]
+                 for k, v in data.items()}
 
     for i in range(len(flat_data)):
         for j in range(len(flat_data[f"{i}"])):
             match flat_data[f"{i}"][j]:
-                case "rice_porridge": 
+                case "rice_porridge":
                     flat_data[f"{i}"][j] = 1
                 case "hot_dogs":
                     flat_data[f"{i}"][j] = 2
@@ -111,7 +117,8 @@ def process_prices():
 
     for j in range(0, len(flat_data[f"{0}"]), 2):
         for i in range(0, len(flat_data)):
-            output += f"INSERT INTO PRICES (WEEK, ARTICLE_ID, ARTICLE_PRICE) VALUES ({i}, {flat_data[f"{i}"][j]}, {flat_data[f"{i}"][j+1]});\n"
+            output += f"INSERT INTO PRICES (WEEK, ARTICLE_ID, ARTICLE_PRICE) VALUES ({i}, {flat_data[f"{i}"][j]}, {
+                flat_data[f"{i}"][j+1]});\n"
 
     write_string_to_txt(output, "insert_scripts", "prices.txt")
 
@@ -142,7 +149,8 @@ def process_schedules():
     def q(s) -> str:
         return "'" + str(s).replace("'", "''") + "'"
 
-    days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+    days = ["monday", "tuesday", "wednesday",
+            "thursday", "friday", "saturday", "sunday"]
 
     def normalize_day(d):
         # Accept ints, numeric strings, and canonical day names (case-insensitive)
@@ -203,9 +211,6 @@ def process_schedules():
 
     output = "".join(output_lines) + ("" if output_lines else "")
     write_string_to_txt(output, "insert_scripts", "schedules.txt")
-
-
-    
 
 
 def process_transactions():
@@ -281,7 +286,8 @@ def process_transactions():
 
                 # Pair up types and amounts safely
                 for idx, art_name in enumerate(merch_types):
-                    amount = merch_amounts[idx] if idx < len(merch_amounts) else 0
+                    amount = merch_amounts[idx] if idx < len(
+                        merch_amounts) else 0
                     article_id = name_to_id.get(art_name)
                     if article_id is None:
                         # Unknown article name -> skip this line gracefully
@@ -310,9 +316,3 @@ match import_topic:
         process_schedules()
     case "transactions":
         process_transactions()
-    case "all":
-        process_amounts()
-        process_prices()
-        process_schedules()
-        process_transactions()
-
