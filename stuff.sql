@@ -25,12 +25,16 @@ LEFT JOIN articles as c
 ON a.ARTICLE_ID = c.ARTICLE_ID
 LEFT JOIN purchases as d
 ON d.ARTICLE_ID = a.ARTICLE_ID
-WHERE a.week = 0 AND b.WEEK = 0 AND d.WEEK = 0
+WHERE a.week = 6 AND b.WEEK = 6 AND d.WEEK = 6
 group by a.week, a.ARTICLE_ID, c.article_name, b.ARTICLE_PRICE
-order by a.ARTICLE_ID;
+order by article_name;
 
 
 SELECT * FROM TRANSACTIONS WHERE WEEK = 4 AND ARTICLE_ID = 5;
 SELECT * FROM SCHEDULES WHERE WEEK = 4 and DAY = "sunday" and WORKER_ID = "w_8a912f92-d7a8-4352-b86b-51cebacc1371";
 
 SELECT * FROM SUPPLIER_PRICES;
+
+SELECT worker_id, worker_salary from workers;
+
+truncate prices;
